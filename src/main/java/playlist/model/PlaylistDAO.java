@@ -215,7 +215,7 @@ public class PlaylistDAO extends CassandraData {
     // Let's use named parameters this time
     boundStatement.setString("username", getUsername());
     boundStatement.setString("playlist_name", getPlaylist_name());
-    boundStatement.setDate("sequence_no", playlistTrack.sequence_no);
+    boundStatement.setTimestamp("sequence_no", playlistTrack.sequence_no);
     boundStatement.setString("track_name", playlistTrack.getTrack_name());
     boundStatement.setString("artist", playlistTrack.getArtist());
     boundStatement.setUUID("track_id", playlistTrack.getTrack_id());
