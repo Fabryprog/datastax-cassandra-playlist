@@ -56,7 +56,7 @@ public class PlaylistDAO extends CassandraData {
       this.track_name = row.getString("track_name");
       this.artist = row.getString("artist");
       this.track_length_in_seconds = row.getInt("track_length_in_seconds");
-      this.sequence_no = row.getDate("sequence_no");
+      this.sequence_no = row.getTimestamp("sequence_no");
       this.track_id = row.getUUID("track_id");
       this.genre = row.getString("genre");
     }
